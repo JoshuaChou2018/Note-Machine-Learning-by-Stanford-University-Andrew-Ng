@@ -6,6 +6,10 @@ Since y = {0,1...n}, we divide our problem into n+1 (+1 because the index starts
 
 ![image-20190102161635941](11Multiclass Classification/image-20190102161635941-6416995.png)
 
+![image-20190128163854285](11Multiclass Classification/image-20190128163854285.png)
+
+根据类别的数目，设置不同的分类器，然后取所有分类器的最大预测值的对应的类别
+
 We are basically choosing one class and then lumping all the others into a single second class. We do this repeatedly, applying binary logistic regression to each case, and then use the hypothesis that returned the highest value as our prediction.
 
 The following image shows how one could classify 3 classes:
