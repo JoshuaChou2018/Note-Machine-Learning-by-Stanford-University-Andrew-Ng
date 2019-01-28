@@ -40,7 +40,13 @@ Remember that the general form of gradient descent is:
 
 **Note:** [7:35 - '100' should be 100 instead. The value provided should be an integer and not a character string.]
 
-"Conjugate gradient", "BFGS", and "L-BFGS" are more sophisticated, faster ways to optimize θ that can be used instead of gradient descent. We suggest that you should not write these more sophisticated algorithms yourself (unless you are an expert in numerical computing) but use the libraries instead, as they're already tested and highly optimized. Octave provides them.
+"Conjugate gradient", "BFGS", and "L-BFGS" are more sophisticated, faster ways to optimize θ that can be used instead of gradient descent. 
+
+![image-20190128162400241](10Logistic Regression model/image-20190128162400241.png)
+
+这三种方法有一个linear search的内置算法，每一轮迭代都会选择不同的学习率α来更新参数，不需要手动选择α
+
+We suggest that you should not write these more sophisticated algorithms yourself (unless you are an expert in numerical computing) but use the libraries instead, as they're already tested and highly optimized. Octave provides them.
 
 We first need to provide a function that evaluates the following two functions for a given input value θ:
 
@@ -70,3 +76,10 @@ initialTheta = zeros(2,1);
 ```
 
 We give to the function "fminunc()" our cost function, our initial vector of theta values, and the "options" object that we created beforehand.
+
+![image-20190128162816842](10Logistic Regression model/image-20190128162816842.png)
+
+![image-20190128163102755](10Logistic Regression model/image-20190128163102755.png)
+
+exitflag=1 表示函数收敛
+
